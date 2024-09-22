@@ -1,0 +1,178 @@
+/*
+Colors
+#edeef0
+green
+#e1e5eb
+#507299
+#2e5473
+#d0d0d0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edeef0;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #507299;
+    top: 0;
+    padding: 7px;
+    height: 40px;
+}
+
+.header__container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    width: 1000px;
+    margin: 50px auto 10px;
+}
+
+nav {
+    width: 20%;
+}
+
+ul>li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #507299;
+}
+
+ul>li a {
+    display: block;
+    padding: 10px;
+}
+
+ul>li a:hover {
+    background-color:#e1e5eb;
+}
+
+.content {
+    width: 50%;
+}
+
+.content__block {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #d0d0d0;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.content__block img {
+    width: 100%;
+}
+
+.content__block-header {
+    font-weight: bold;
+}
+
+.content__block-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__block-inner::selection {
+    color: green;
+    background-color: #e1e5eb;
+}
+
+.content__block-header::after,  .content__block-inner::after{
+    content: "";
+    display: block;
+    border: 2px solid #d0d0d0;
+    margin: 15px -20px;
+}
+
+.content__block-inner::after {
+    margin: 15px 0;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50px;
+    right: 250px;
+}
+
+.aside__block {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border: 2px solid #d0d0d0;
+    border-radius: 8px;
+    align-self: flex-end;
+}
+
+.aside__block-header {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.aside__block-content {
+    background-color: #edeef0;
+    margin: 15px 0;
+}
+
+footer {
+    padding: 10px;
+    background-color: white;
+    color: #d0d0d0;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    .aside {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    nav {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 10px;
+    }
+}
